@@ -4,56 +4,33 @@ $show-bg-color: false;
 header {
     max-width: 100%;
     position: relative;
-    // @include ele-bg($url: "../images/galaxy-bg.jpg");
     color: white;
 
     nav {
         z-index: 999;
         width: 100%;
-        // background-color: black;
         @include bg-color($color: red, $show: $show-bg-color);
         position: fixed;
 
-        // top: 0;
-        // left: 0
         display: flex;
-        // justify-content: space-between;
         align-items: center;
         padding: 20px;
-        // background: transparent;
-        // @include ele-bg($url: "../images/galaxy-bg.jpg");
 
         #logo-container {
-            // display: flex;
             flex: 1;
-            // background-color: blue;
-            // @include bg-color($color: blue, $show: $show-bg-color);
             padding-left: 20px;
-            // align-items: center;
-            // position: relative;
-            // position: absolute;  // ??
-            // padding-left: 20px;
-            // float: left;
-            
-            // line-height: 8dvh;  // fixed-size! - nav height
-            // text-transform: uppercase;
-            // font-size: 1.4em; // fixed-size!
-            // font-weight: bold;
-            // color: var(--color1);
 
             a {
                 text-decoration: none;
                 color: white !important;
                 cursor: pointer;
 
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 font-weight: bold;
 
                 img {
                     position: absolute;
                     border: 1px solid black;
-                    // border: 1px solid black;
-                    // padding-bottom: 50px;
                     margin-bottom: 50px;
                     width: 150px;
                     height: auto;
@@ -62,34 +39,23 @@ header {
         }
 
         #nav-container {
-            // float: right;
+            flex: 2.5;
             // background-color: red;
-            // @include bg-color($color: red, $show: $show-bg-color);
-            flex: 3;
 
-            // color: black;
-            // padding-top: 15px;
-            
             ul {
                 
-                li {  // #nav-list li
+                li {
                     display: flex;
                     gap: 40px;
-                    // @float-approach
-                    // float: left;
-                    // position: relative;
+
                     list-style-type: none;
                     text-align: center;
                     
                     a {
                         font-family: 'Open Sans', sans-serif;
-                        // font-weight: 100;
-                        // font-style: normal;
                         color: white;
-                        // color: rgb(0, 123, 255);
-                        // font-weight: bold;
-                        // font-weight: 200;
                         font-style: 'Helvetica', sans-serif;
+                        font-size: large;
 
                         text-decoration: none;
                         text-transform: uppercase;
