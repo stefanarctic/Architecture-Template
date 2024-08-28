@@ -1,1 +1,1 @@
-"# Architecture-Template" 
+# Architecture Template 
