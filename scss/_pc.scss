@@ -2,29 +2,106 @@
 body, html {
     margin: 0;
     padding: 0;
+    // background-color: red !important;
 }
 
 header {
     height: 100vh;
 }
 
+section {
+    background-color: rgb(7, 5, 0);
+    // background-color: black;
+    color: white;
+}
+
 section#about {
-    background-color: white;
-    height: 40vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    max-height: 60vh;
+    height: 100%;
+    // margin: 0;
+    // padding: 0;
 
-    h1 {
-        padding-left: 100px;
-        // padding-top: 80px;
-        padding-top: 80px;
-        font-size: xx-large;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+        url('../../res/architecture_indoors1.jpg')
+        no-repeat center fixed;
+    background-size: cover;
+
+    background-color: transparent;
+
+    // background-color: red;
+
+    .about-text {
+        flex: 1;
+        // background-color: blue;
+
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        gap: 20px;
+        margin-top: 40px;
+        padding: 40px;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+        flex-direction: column;
+
+        // h1 {
+        //     font-size: 50px;
+        //     font-weight: 900;
+        // }
+
+        p {
+            all: unset;
+            font-family: 'Open Sans', sans-serif;
+            font-size: larger;
+            font-weight: 400;
+        }
+
+        h6 {
+            all: unset;
+            font-family: 'Open Sans', sans-serif;
+            font-size: x-large;
+            font-weight: 600;
+        }
     }
 
-    p {
-        padding: 20px;
-        padding-left: 100px;
-        font-weight: 500;
+    .about-img {
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin-top: 40px;
+        margin-bottom: 40px;
+        flex-direction: column;
+
+        h1 {
+            font-size: 50px;
+            // font-stretch: extra-expanded;
+            font-weight: 900;
+        }   
+
+        img {
+            width: 500px;
+            height: 260px;
+            border-radius: 1em;
+        }
     }
+
+    // h1 {
+    //     padding-left: 100px;
+    //     // padding-top: 80px;
+    //     padding-top: 80px;
+    //     font-size: xx-large;
+    // }
+
+    // p {
+    //     padding: 20px;
+    //     padding-left: 100px;
+    //     font-weight: 500;
+    // }
 }

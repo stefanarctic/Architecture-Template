@@ -179,6 +179,8 @@ header main {
   height: 100%;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
   font-family: "MD Grotesk", sans-serif;
   font-size: xx-large;
 }
@@ -226,6 +228,32 @@ header main #hero-container button:hover {
 header main #hero-container button:hover p {
   font-weight: 900;
 }
+header main #hero-img-container {
+  margin-right: 25%;
+}
+header main #hero-img-container img {
+  margin-left: 20%;
+  width: 350px;
+  filter: brightness(90%);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+header main #hero-img-container .image-stack {
+  position: relative;
+  width: 100%;
+}
+header main #hero-img-container .image-stack .image-stack-item--bottom {
+  position: absolute;
+  right: -150px;
+  top: -10px;
+  padding-top: 80px;
+  width: 80%;
+  z-index: -1;
+}
+header main #hero-img-container .image-stack .image-stack-item--top {
+  padding-bottom: 80px;
+  right: 40px;
+  width: 0%;
+}
 
 body, html {
   margin: 0;
@@ -236,20 +264,59 @@ header {
   height: 100vh;
 }
 
+section {
+  background-color: rgb(7, 5, 0);
+  color: white;
+}
+
 section#about {
-  background-color: white;
-  height: 40vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  max-height: 60vh;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../res/architecture_indoors1.jpg") no-repeat center fixed;
+  background-size: cover;
+  background-color: transparent;
 }
-section#about h1 {
-  padding-left: 100px;
-  padding-top: 80px;
-  font-size: xx-large;
+section#about .about-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 20px;
+  margin-top: 40px;
+  padding: 40px;
+  padding-bottom: 0px;
+  margin-bottom: 40px;
+  flex-direction: column;
 }
-section#about p {
-  padding: 20px;
-  padding-left: 100px;
-  font-weight: 500;
+section#about .about-text p {
+  all: unset;
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  font-weight: 400;
+}
+section#about .about-text h6 {
+  all: unset;
+  font-family: "Open Sans", sans-serif;
+  font-size: x-large;
+  font-weight: 600;
+}
+section#about .about-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-direction: column;
+}
+section#about .about-img h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+section#about .about-img img {
+  width: 500px;
+  height: 260px;
+  border-radius: 1em;
 }/*# sourceMappingURL=style.css.map */

@@ -35,12 +35,15 @@ header {
         // justify-content: center;
         // padding-left: 2.5rem;
         align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
         
         // @include ele-bg($url: "../../res/architecture_indoors1.jpg");
         font-family: 'MD Grotesk', sans-serif;
         font-size: xx-large;
         
         #hero-container {
+            // flex: 3;
             // background-color: red;
             // height: 70vh;
             margin-left: 10%;
@@ -104,6 +107,43 @@ header {
                     p {
                         font-weight: 900;
                     }
+                }
+            }
+        }
+
+        #hero-img-container {
+            // flex: 3;
+            margin-right: 25%;
+            // background-color: red;
+
+            img {
+                margin-left: 20%;
+                width: 350px;
+                filter: brightness(90%);
+
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;                // height: 550px;
+                // border: 1px solid gold;
+            }
+
+            .image-stack {
+                position: relative;
+                width: 100%;
+
+                .image-stack-item--bottom {
+                    position: absolute;
+                    right: -150px;
+                    top: -10px;
+                    // padding-bottom: 20px;
+                    padding-top: 80px;
+                    width: 80%;
+                    z-index: -1;
+                }
+
+                .image-stack-item--top {
+                    padding-bottom: 80px;
+                    // padding-right: 20px;
+                    right: 40px;
+                    width: 0%;
                 }
             }
         }
