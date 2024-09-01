@@ -365,17 +365,41 @@ section#services {
                 display: flex;
                 flex-direction: column;
                 height: 100%;
-
+                // text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+                text-shadow: 4px 4px 6px rgb(43, 43, 58);
+                
                 h1 {
+                    // text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
                     // background-color: blue;
                     // margin: 0;
+                    margin-top: 40px;
+                    margin-bottom: 10px;
                 }
 
                 p {
+                    // text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
                     // background-color: green;
                     font-size: 25px;
                     margin: 0;
                 }
+            }
+
+            // transition: padding 0.5s;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.301);
+                border-radius: 1.5em;
+
+                .text-parent {
+                    .h1 {
+                        font-size: 100px !important;
+                        color: black;
+                    }
+                }
+
+                // padding: 0;
+                // transition: padding 0.5s;
+                
+                cursor: pointer;
             }
 
             // .img {
