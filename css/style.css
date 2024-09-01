@@ -426,45 +426,58 @@ section#services {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 }
 section#services h1 {
   font-size: 50px;
   font-weight: 900;
 }
 section#services .services-parent {
-  width: 80%;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  gap: 40px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-areas: "house-design office-design" "interior-detailing paint-selection";
+  gap: 30px;
 }
 section#services .services-parent .service {
-  width: 300px;
-  height: 280px;
-  padding: 20px;
-  border-radius: 25px;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  text-shadow: 4px 4px 6px rgb(66, 68, 90);
-}
-section#services .services-parent .service .service-content {
-  position: absolute;
-}
-section#services .services-parent .service .service-content h1 {
-  font-size: 30px;
-  font-weight: 900;
-}
-section#services .services-parent .service .service-content p {
-  font-size: 20px;
-  font-weight: 400;
+  width: 800px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
 }
 section#services .services-parent .service.s1 {
-  background-image: url("../res/House_Design.png");
-  background-size: cover;
+  grid-area: house-design;
 }
 section#services .services-parent .service.s2 {
-  background-image: url("../res/Office_Design.jpg");
-  background-size: cover;
+  grid-area: office-design;
+}
+section#services .services-parent .service.s3 {
+  grid-area: interior-detailing;
+}
+section#services .services-parent .service.s4 {
+  grid-area: paint-selection;
+}
+section#services .services-parent .service .img-parent {
+  min-width: 200px;
+  min-height: 200px;
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 0.5em;
+}
+section#services .services-parent .service .img-parent img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+}
+section#services .services-parent .service .text-parent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+section#services .services-parent .service .text-parent p {
+  font-size: 25px;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
