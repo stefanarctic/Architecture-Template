@@ -258,6 +258,7 @@ header main #hero-img-container .image-stack .image-stack-item--top {
 body, html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -283,6 +284,7 @@ section#about .about-text {
   justify-content: center;
   align-items: left;
   gap: 20px;
+  margin-left: 40px;
   margin-top: 40px;
   padding: 40px;
   padding-bottom: 0px;
@@ -347,4 +349,122 @@ section#achievements .ac h1 {
 section#achievements .ac p {
   font-size: larger;
   font-weight: 800;
+}
+
+section#our-work {
+  background: none;
+  height: 800px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+section#our-work h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+section#our-work .bento-grid-container {
+  width: 900px;
+  max-height: 600px;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+section#our-work .bento-grid-container *:not(img) {
+  border-radius: 1.5em;
+}
+section#our-work .bento-grid-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5em;
+}
+section#our-work .bento-grid-container > .col-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border: none;
+}
+section#our-work .bento-grid-container > .col-left > .row1 {
+  flex: 1;
+}
+section#our-work .bento-grid-container > .col-left > .row2 {
+  flex: 2;
+}
+section#our-work .bento-grid-container > .col-right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border: none;
+}
+section#our-work .bento-grid-container > .col-right > .row1 {
+  flex: 2;
+  max-height: 250px;
+}
+section#our-work .bento-grid-container > .col-right > .row2 {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  border: none;
+}
+section#our-work .bento-grid-container > .col-right > .row2 > .col-left {
+  flex: 1;
+}
+section#our-work .bento-grid-container > .col-right > .row2 > .col-right {
+  flex: 1;
+}
+
+section#services {
+  background: none;
+  height: 800px;
+  padding: 20px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+section#services h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+section#services .services-parent {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 40px;
+}
+section#services .services-parent .service {
+  width: 300px;
+  height: 280px;
+  padding: 20px;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  text-shadow: 4px 4px 6px rgb(66, 68, 90);
+}
+section#services .services-parent .service .service-content {
+  position: absolute;
+}
+section#services .services-parent .service .service-content h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+section#services .services-parent .service .service-content p {
+  font-size: 20px;
+  font-weight: 400;
+}
+section#services .services-parent .service.s1 {
+  background-image: url("../res/House_Design.png");
+  background-size: cover;
+}
+section#services .services-parent .service.s2 {
+  background-image: url("../res/Office_Design.jpg");
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */

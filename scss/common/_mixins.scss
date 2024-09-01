@@ -103,3 +103,15 @@
         background-color: $color;
     }
 }
+
+@mixin bento-grid-container(
+    $flex: 1,
+    $direction: row,
+    $gap: 0.5em
+){
+    flex: $flex;
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+    border: none;
+}
