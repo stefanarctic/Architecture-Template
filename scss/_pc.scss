@@ -358,6 +358,8 @@ section#services {
                     height: 100%;
                     border-radius: 0.5em;
                 }
+
+                transition-duration: 0.3s;
             }
 
             .text-parent {
@@ -379,9 +381,12 @@ section#services {
                 p {
                     // text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
                     // background-color: green;
-                    font-size: 25px;
+                    font-size: 23px;
+                    font-family: 'Open Sans', sans-serif;
                     margin: 0;
                 }
+
+                transition-duration: 0.3s;
             }
 
             // transition: padding 0.5s;
@@ -389,15 +394,31 @@ section#services {
                 background-color: rgba(0, 0, 0, 0.301);
                 border-radius: 1.5em;
 
-                .text-parent {
-                    .h1 {
-                        font-size: 100px !important;
-                        color: black;
-                    }
-                }
+                // .text-parent {
+
+                //     h1 {
+                //         font-size: 55px;
+                //         // font-size: 100px !important;
+                //         // color: black;
+                //     }
+
+                //     p {
+                //         font-size: 30px;
+                //     }
+                // }
 
                 // padding: 0;
                 // transition: padding 0.5s;
+
+                .img-parent {
+                    margin-bottom: 20px;
+                    transition-duration: 0.3s;
+                }
+
+                .text-parent {
+                    margin-bottom: 20px;
+                    transition-duration: 0.3s;
+                }
                 
                 cursor: pointer;
             }

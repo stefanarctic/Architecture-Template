@@ -19,6 +19,9 @@ header nav {
   display: flex;
   align-items: center;
   padding: 20px;
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 header nav #logo-container {
   flex: 1;
@@ -121,6 +124,23 @@ header nav::after {
   content: "";
   clear: both;
   display: table;
+}
+@keyframes show-blur {
+  from {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  }
+  to {
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0));
+  }
+}
+header nav.scrolled {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0));
 }
 
 .selected {
@@ -466,6 +486,7 @@ section#services .services-parent .service .img-parent {
   height: 200px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 0.5em;
+  transition-duration: 0.3s;
 }
 section#services .services-parent .service .img-parent img {
   width: 100%;
@@ -477,13 +498,15 @@ section#services .services-parent .service .text-parent {
   flex-direction: column;
   height: 100%;
   text-shadow: 4px 4px 6px rgb(43, 43, 58);
+  transition-duration: 0.3s;
 }
 section#services .services-parent .service .text-parent h1 {
   margin-top: 40px;
   margin-bottom: 10px;
 }
 section#services .services-parent .service .text-parent p {
-  font-size: 25px;
+  font-size: 23px;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
 }
 section#services .services-parent .service:hover {
@@ -491,7 +514,11 @@ section#services .services-parent .service:hover {
   border-radius: 1.5em;
   cursor: pointer;
 }
-section#services .services-parent .service:hover .text-parent .h1 {
-  font-size: 100px !important;
-  color: black;
+section#services .services-parent .service:hover .img-parent {
+  margin-bottom: 20px;
+  transition-duration: 0.3s;
+}
+section#services .services-parent .service:hover .text-parent {
+  margin-bottom: 20px;
+  transition-duration: 0.3s;
 }/*# sourceMappingURL=style.css.map */
