@@ -248,17 +248,117 @@ section#our-work {
             border-radius: 1.5em;
         }
 
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 1.5em;
-            // object-fit: fill;
-            // object-fit: contain;
-            // all: unset;
-            // width: auto;
-            // height: auto;
-            // width: fixed;
-            // height: fixed;
+        .rect {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 5;
+
+            &::after {
+                z-index: 6;
+                content: "";
+                display: none;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+                border-radius: 1.5em;
+                // border-radius: 50%;
+                position: absolute;
+                top: 0; left: 0;
+            }
+
+            .about-text {
+                all: unset;
+                position: absolute;
+                // margin: 20px;
+                width: 80%;
+                height: 80%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                // background-color: red;
+                // background-color: red;
+                z-index: 7;
+                display: none;
+                flex-direction: column;
+                // align-items: center;
+                // align-content: center;
+                gap: 10px;
+                // padding: 5px;
+
+                h1 {
+                    // background-color: red;
+                    all: unset;
+                    text-shadow: 4px 4px 6px rgb(43, 43, 58);
+                    // max-width: fit-content;
+                    // margin-left: auto;
+                    // margin-right: auto;
+                    // padding-top: 20px;
+                    // text-wrap: inherit;
+                    // position: absolute;
+                    // margin: auto;
+                    // top: 50%;
+                    // left: 50%;
+                    // transform: translate(-50%, -50%);
+    
+                    font-size: 2.5rem;
+                    // font-size: 325%;
+                    font-weight: 900;
+                    z-index: 7;
+                    // text-align: center;
+                    // top: 50%;
+                    // right: 50%;
+                }
+    
+                p {
+                    all: unset;
+                    text-shadow: 4px 4px 6px rgb(43, 43, 58);
+                    // padding-top: 20px;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    text-wrap: wrap;
+                    // position: absolute;
+                    // top: 50%;
+                    // left: 50%;
+                    // transform: translate(-50%, -50%);
+    
+                    z-index: 7;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 1.5em;
+                transition: 0.2s;
+    
+                // &:hover {
+                //     filter: brightness(50%);
+                // }
+                // object-fit: fill;
+                // object-fit: contain;
+                // all: unset;
+                // width: auto;
+                // height: auto;
+                // width: fixed;
+                // height: fixed;
+            }
+
+            &:hover {
+                &::after {
+                    display: block;
+                }
+
+                .about-text {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                & > img {
+                    transform: scale(1.1, 1.1);
+                }
+            }
         }
 
         & > .col-left {

@@ -402,10 +402,68 @@ section#our-work .bento-grid-container {
 section#our-work .bento-grid-container *:not(img) {
   border-radius: 1.5em;
 }
-section#our-work .bento-grid-container img {
+section#our-work .bento-grid-container .rect {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 5;
+}
+section#our-work .bento-grid-container .rect::after {
+  z-index: 6;
+  content: "";
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section#our-work .bento-grid-container .rect .about-text {
+  all: unset;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+section#our-work .bento-grid-container .rect .about-text h1 {
+  all: unset;
+  text-shadow: 4px 4px 6px rgb(43, 43, 58);
+  font-size: 2.5rem;
+  font-weight: 900;
+  z-index: 7;
+}
+section#our-work .bento-grid-container .rect .about-text p {
+  all: unset;
+  text-shadow: 4px 4px 6px rgb(43, 43, 58);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-wrap: wrap;
+  z-index: 7;
+}
+section#our-work .bento-grid-container .rect img {
   width: 100%;
   height: 100%;
   border-radius: 1.5em;
+  transition: 0.2s;
+}
+section#our-work .bento-grid-container .rect:hover::after {
+  display: block;
+}
+section#our-work .bento-grid-container .rect:hover .about-text {
+  display: flex;
+  flex-direction: column;
+}
+section#our-work .bento-grid-container .rect:hover > img {
+  transform: scale(1.1, 1.1);
 }
 section#our-work .bento-grid-container > .col-left {
   flex: 1.2;
