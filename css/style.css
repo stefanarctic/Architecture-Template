@@ -392,8 +392,8 @@ section#our-work h1 {
   font-weight: 900;
 }
 section#our-work .bento-grid-container {
-  width: 900px;
-  max-height: 600px;
+  width: 850px;
+  height: 600px;
   padding: 1em;
   display: flex;
   flex-direction: row;
@@ -437,17 +437,51 @@ section#our-work .bento-grid-container .rect .about-text {
 section#our-work .bento-grid-container .rect .about-text h1 {
   all: unset;
   text-shadow: 4px 4px 6px rgb(43, 43, 58);
-  font-size: 2.5rem;
   font-weight: 900;
   z-index: 7;
 }
 section#our-work .bento-grid-container .rect .about-text p {
   all: unset;
   text-shadow: 4px 4px 6px rgb(43, 43, 58);
-  font-size: 1.5rem;
   font-weight: 400;
+  font-family: "Open Sans", sans-serif;
   text-wrap: wrap;
   z-index: 7;
+}
+section#our-work .bento-grid-container .rect.rect1 h1 {
+  font-size: 2.5rem;
+}
+section#our-work .bento-grid-container .rect.rect1 p {
+  font-size: 1.5rem;
+}
+section#our-work .bento-grid-container .rect.rect2 h1 {
+  font-size: 1.5rem;
+}
+section#our-work .bento-grid-container .rect.rect2 p {
+  font-size: 1.1rem;
+}
+section#our-work .bento-grid-container .rect.rect3 h1 {
+  font-size: 1.5rem;
+}
+section#our-work .bento-grid-container .rect.rect3 p {
+  font-size: 1.25rem;
+}
+section#our-work .bento-grid-container .rect.rect4 h1 {
+  font-size: 1.5rem;
+}
+section#our-work .bento-grid-container .rect.rect4 p {
+  font-size: 1.25rem;
+}
+section#our-work .bento-grid-container .rect.rect5 .about-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section#our-work .bento-grid-container .rect.rect5 h1 {
+  font-size: 2.7rem;
+}
+section#our-work .bento-grid-container .rect.rect5 p {
+  font-size: 2.25rem;
 }
 section#our-work .bento-grid-container .rect img {
   width: 100%;
@@ -466,41 +500,40 @@ section#our-work .bento-grid-container .rect:hover > img {
   transform: scale(1.1, 1.1);
 }
 section#our-work .bento-grid-container > .col-left {
-  flex: 1.2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   border: none;
 }
 section#our-work .bento-grid-container > .col-left > .row1 {
-  flex: 1;
-}
-section#our-work .bento-grid-container > .col-left > .row2 {
   flex: 2;
 }
+section#our-work .bento-grid-container > .col-left > .row2 {
+  flex: 1;
+}
 section#our-work .bento-grid-container > .col-right {
-  flex: 3;
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   border: none;
 }
 section#our-work .bento-grid-container > .col-right > .row1 {
-  flex: 2;
-  max-height: 250px;
-}
-section#our-work .bento-grid-container > .col-right > .row2 {
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: row;
   gap: 0.5em;
   border: none;
 }
-section#our-work .bento-grid-container > .col-right > .row2 > .col-left {
+section#our-work .bento-grid-container > .col-right > .row1 > .col-left {
   flex: 1;
 }
-section#our-work .bento-grid-container > .col-right > .row2 > .col-right {
+section#our-work .bento-grid-container > .col-right > .row1 > .col-right {
   flex: 1;
+}
+section#our-work .bento-grid-container > .col-right > .row2 {
+  flex: 2;
 }
 
 section#services {

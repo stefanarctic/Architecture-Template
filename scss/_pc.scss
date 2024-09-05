@@ -234,14 +234,24 @@ section#our-work {
     }
 
     .bento-grid-container {
-        // background-color: white;
-        width: 900px;
-        max-height: 600px;
+        width: 850px;
+        height: 600px;
         padding: 1em;
         display: flex;
         flex-direction: row;
         gap: 0.5em;
-        $gap-v: 0.5em;
+        // width: 800px;
+        // height: 700px;
+
+
+        // width: 900px;
+        // max-height: 600px;
+        // padding: 1em;
+        // display: flex;
+        // flex-direction: row;
+        // gap: 0.5em;
+        // $gap-v: 0.5em;
+
 
         *:not(img) {
             // border: 3px solid red;
@@ -291,6 +301,10 @@ section#our-work {
                     // background-color: red;
                     all: unset;
                     text-shadow: 4px 4px 6px rgb(43, 43, 58);
+                    font-weight: 900;
+                    // font-family: 'Open Sans', sans-serif;
+                    // font-family: 'MD Grotesk', sans-serif;
+                    z-index: 7;
                     // max-width: fit-content;
                     // margin-left: auto;
                     // margin-right: auto;
@@ -302,10 +316,11 @@ section#our-work {
                     // left: 50%;
                     // transform: translate(-50%, -50%);
     
-                    font-size: 2.5rem;
+                    // font-size: 2.5rem;
+                    // font-size: 40px;
+                    // font-size: calc();
+                    // font-size: 125%;
                     // font-size: 325%;
-                    font-weight: 900;
-                    z-index: 7;
                     // text-align: center;
                     // top: 50%;
                     // right: 50%;
@@ -314,10 +329,12 @@ section#our-work {
                 p {
                     all: unset;
                     text-shadow: 4px 4px 6px rgb(43, 43, 58);
-                    // padding-top: 20px;
-                    font-size: 1.5rem;
                     font-weight: 400;
+                    font-family: 'Open Sans', sans-serif;
+                    // font-family: 'MD Grotesk', sans-serif;
                     text-wrap: wrap;
+                    // font-size: 1.5rem;
+                    // padding-top: 20px;
                     // position: absolute;
                     // top: 50%;
                     // left: 50%;
@@ -326,6 +343,68 @@ section#our-work {
                     z-index: 7;
                 }
             }
+
+            &.rect1 {
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &.rect2 {
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+
+            &.rect3 {
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+
+            &.rect4 {
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+
+            &.rect5 {
+
+                .about-text {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                h1 {
+                    font-size: 2.7rem;
+                }
+
+                p {
+                    font-size: 2.25rem;
+                }
+            }
+
 
             img {
                 width: 100%;
@@ -362,8 +441,23 @@ section#our-work {
         }
 
         & > .col-left {
-            // @include bento-grid-container(1.2, row);
-            flex: 1.2;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            border: none;
+
+            & > .row1 {
+                flex: 2;
+            }
+
+            & > .row2 {
+                flex: 1;
+            }
+        }
+
+        & > .col-right {
+            flex: 2;
             display: flex;
             flex-direction: column;
             gap: 0.5em;
@@ -371,31 +465,6 @@ section#our-work {
 
             & > .row1 {
                 flex: 1;
-            }
-
-            & > .row2 {
-                flex: 2;
-            }
-        }
-
-        & > .col-right {
-            flex: 3;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-            border: none;
-
-            & > .row1 {
-                flex: 2;
-                max-height: 250px;
-                // max-height: 50%;
-                // width: 500px;
-                // max-width: 100%;
-                // max-height: 500px;
-            }
-
-            & > .row2 {
-                flex: 2;
                 display: flex;
                 flex-direction: row;
                 gap: 0.5em;
@@ -409,14 +478,57 @@ section#our-work {
                     flex: 1;
                 }
             }
-        }
-    }
 
-    // .test {
-    //     background-color: white;
-    //     width: 500px;
-    //     height: 200px;
-    // }
+            & > .row2 {
+                flex: 2;
+            }
+        }
+
+        // & > .col-left {
+        //     flex: 1.2;
+        //     display: flex;
+        //     flex-direction: column;
+        //     gap: 0.5em;
+        //     border: none;
+
+        //     & > .row1 {
+        //         flex: 1;
+        //     }
+
+        //     & > .row2 {
+        //         flex: 2;
+        //     }
+        // }
+
+        // & > .col-right {
+        //     flex: 3;
+        //     display: flex;
+        //     flex-direction: column;
+        //     gap: 0.5em;
+        //     border: none;
+
+        //     & > .row1 {
+        //         flex: 2;
+        //         max-height: 250px;
+        //     }
+
+        //     & > .row2 {
+        //         flex: 2;
+        //         display: flex;
+        //         flex-direction: row;
+        //         gap: 0.5em;
+        //         border: none;
+
+        //         & > .col-left {
+        //             flex: 1;
+        //         }
+
+        //         & > .col-right {
+        //             flex: 1;
+        //         }
+        //     }
+        // }
+    }
 }
 
 section#services {

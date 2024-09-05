@@ -17,6 +17,27 @@ document.addEventListener('keydown', e => {
 
 // const timeouts = [];
 
+// document.querySelector("#our-work > div > div.col-left > div.row1.rect.rect1 > div > h1")
+
+$(document).ready(() => {
+
+    // document.querySelector("#our-work > div > div.col-left > div.row1.rect.rect1 > div > h1");
+    // const rects = document.querySelectorAll('.rect');
+    // for(let i = 0; i < rects.length; i++)
+    // {
+    //     const h1 = rects[i].querySelector('h1');
+    //     const p = rects[i].querySelector('p');
+    //     const size = (rects[i].style.width * rects[i].style.height) / 2744;
+    //     h1?.style.setProperty('fontSize', `${size}px`);
+    // }
+
+    if($(this).scrollTop() > 100)
+    {
+        $('nav').css('backdrop-filter', 'blur(2px)');
+        $('nav').css('background', 'linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0))');
+    }
+})
+
 // Change header on scroll
 $(document).scroll(() => {
     // $("nav").toggleClass("scrolled", $(this).scrollTop() > 100);
