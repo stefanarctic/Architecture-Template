@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js" defer></script>
     <script src="./js/testimonials.js" defer></script>
+    <script src="./js/scroll-animation.js" defer></script>
     <script src="https://kit.fontawesome.com/da2310e377.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -32,12 +33,12 @@
             <div id="nav-container">
                 <ul id="nav-list">
                     <li>
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#our-work">Our Work</a>
-                        <a href="#testimonials">Testimonials</a>
-                        <a href="#services">Services</a>
-                        <a href="#contact-us">Contact Us</a>
+                        <a data-href="#home">Home</a>
+                        <a data-href="#achievements">About</a>
+                        <a data-href="#our-work">Our Work</a>
+                        <a data-href="#testimonials">Testimonials</a>
+                        <a data-href="#services">Services</a>
+                        <a data-href="#contact-us">Contact Us</a>
                     </li>
                 </ul>
                 <div id="nav-mobile"><a id="burger-menu" data-href="#"><span></span></a></div>
@@ -46,14 +47,14 @@
         <!-- <h1>Test</h1> -->
         <!-- <p>Test</p> -->
         <main>
-            <div id="hero-container">
+            <div id="hero-container" class="hidden hidden-left">
                 <h1>Contemporary</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsa aliquid autem aut? Officiis quod culpa perspiciatis repellendus beatae quo consequuntur. Architecto culpa harum reprehenderit dolor quia suscipit ullam laudantium.</p>
                 <button>
                     <p>Contact us</p>
                 </button>
             </div>
-            <div id="hero-img-container">
+            <div id="hero-img-container" class="hidden hidden-bottom">
                 <!-- <img src="./res/architecture_indoors2.jpg" alt=""> -->
                 <div class="image-stack">
                     <div class="image-stack-item--bottom">
@@ -66,7 +67,7 @@
             </div>
         </main>
     </header>
-    <section id="about">
+    <section id="about" class="hidden hidden-bottom">
         <div class="about-us-content">
             <h1>About Us</h1>
             <div class="about-text">
@@ -79,7 +80,7 @@
             <img src="./res/architecture_indoors5.jpg" alt="our-mission">
         </div>
     </section>
-    <section id="achievements">
+    <section id="achievements" class="hidden hidden-bottom">
         <div class="ac ac1">
             <h1>300+</h1>
             <p>Projects finished</p>
@@ -93,18 +94,18 @@
             <p>Happy customers</p>
         </div>
     </section>
-    <section id="our-work">
+    <section id="our-work" class="hidden hidden-bottom">
         <h1>Our Work</h1>
         <div class="bento-grid-container">
             <div class="col-left">
-                <div class="row1 rect rect1">
+                <div class="row1 rect hidden hidden-left rect1">
                     <div class="about-text">
                         <h1>Fancy house</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, necessitatibus!</p>
                     </div>
                     <img src="./res/Horizontal.jpg" alt="" loading="lazy">
                 </div>
-                <div class="row2 rect rect2">
+                <div class="row2 rect hidden hidden-bottom rect2">
                     <div class="about-text">
                         <h1>Fancy villa on the beach</h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, nesciunt.</p>
@@ -114,14 +115,14 @@
             </div>
             <div class="col-right">
                 <div class="row1">
-                    <div class="col-left rect rect3">
+                    <div class="col-left rect hidden hidden-right rect3">
                         <div class="about-text">
                             <h1>Villa in California</h1>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, esse.</p>
                         </div>
                         <img src="./res/Landscape11.jpg" alt="">
                     </div>
-                    <div class="col-right rect rect4">
+                    <div class="col-right rect hidden hidden-right rect4">
                         <div class="about-text">
                             <h1>House in Georgia</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, consequatur?</p>
@@ -129,7 +130,7 @@
                         <img src="./res/Landscape12.jpg" alt="">
                     </div>
                 </div>
-                <div class="row2 rect rect5">
+                <div class="row2 rect hidden hidden-bottom rect5">
                     <div class="about-text">
                         <h1>House in Colorado</h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, deserunt.</p>
@@ -173,7 +174,7 @@
             </div>
         </div> -->
     </section>
-    <section id="testimonials">
+    <section id="testimonials" class="hidden hidden-bottom">
         <h1>Testimonials</h1>
         <div class="testimonial-container">
             <div class="btn" id="btn-prev"><i class="fa-solid fa-chevron-left"></i></div>
@@ -209,10 +210,10 @@
         </div>
     </section>
     <!-- <section id="testimonials">
-        <h2 class="section-title hidden">Testimonials</h2>
+        <h2 class="section-title hidden hidden-bottom">Testimonials</h2>
         <div class="slide-container">
             <div class="slider">
-                <div class="slide-row hidden" style="--slides-num:5">
+                <div class="slide-row hidden hidden-bottom" style="--slides-num:5">
                     <div class="slide-col">
                         <div class="content">
                             <p>Sam's talent as a ghostwrite is unparalleled, and his contribution to my project was
@@ -268,7 +269,7 @@
                 </div>
         </div>
     </section> -->
-    <section id="services">
+    <section id="services" class="hidden hidden-bottom">
         <h1>Services</h1>
         <div class="services-parent">
             <div class="service s1">
@@ -309,7 +310,7 @@
             </div>
         </div>
     </section>
-    <section id="contact-us">
+    <section id="contact-us" class="hidden hidden-bottom">
         <h1>Contact Us</h1>
         <p>Send us a message and we'll see if we are a good fit</p>
         <button>Contact</button>

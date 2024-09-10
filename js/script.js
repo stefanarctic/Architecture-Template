@@ -15,32 +15,61 @@ document.addEventListener('keydown', e => {
     }
 })
 
-// const timeouts = [];
-
-// document.querySelector("#our-work > div > div.col-left > div.row1.rect.rect1 > div > h1")
 
 $(document).ready(() => {
 
-    // document.querySelector("#our-work > div > div.col-left > div.row1.rect.rect1 > div > h1");
-    // const rects = document.querySelectorAll('.rect');
-    // for(let i = 0; i < rects.length; i++)
-    // {
-    //     const h1 = rects[i].querySelector('h1');
-    //     const p = rects[i].querySelector('p');
-    //     const size = (rects[i].style.width * rects[i].style.height) / 2744;
-    //     h1?.style.setProperty('fontSize', `${size}px`);
-    // }
-
+    // Add shadow and blur effect to header when page is scrolled
     if($(this).scrollTop() > 100)
     {
         $('nav').css('backdrop-filter', 'blur(2px)');
         $('nav').css('background', 'linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0))');
     }
+    
+    // Sets up the navbar links for proper scrolling on click
+    const navLinks = document.querySelectorAll("#nav-list li a");
+    navLinks.forEach(a => {
+        a.addEventListener('click', e => {
+            openURL(e.target);
+        })
+    })
+    navLinks[0].addEventListener('click', e => {
+        const header = document.querySelector('header');
+        header.scrollIntoView(true);
+    })
 })
+
+const openURL = linkElement => {
+    const linkId = linkElement.dataset.href.split('#').join('');
+
+    // const sections = document.querySelectorAll('section');
+    // for(let i = 0; i < sections.length; i++)
+    // {
+    //     if(sections[i].id === linkId)
+    //     {
+    //         if(i + 1 === sections.length)
+    //         {
+    //             sections[i].scrollIntoView(false);
+    //             return;
+    //         }
+    //         sections[i + 1].scrollIntoView(true);
+    //     }
+    // }
+
+    const openedSection = document.getElementById(linkId);
+    // const sectionRect = openedSection.getBoundingClientRect();
+    // const top = sectionRect.y;
+    // const height = sectionRect.height;
+    // window.scrollTo(0, top - (height / 2));
+
+    // window.scrollTo(0, top);
+    openedSection.scrollIntoView(false);
+    // window.scrollTo(0, top);
+    // window.scrollTo()
+    console.log(`Scrolled to ${openedSection.id}`);
+}
 
 // Change header on scroll
 $(document).scroll(() => {
-    // $("nav").toggleClass("scrolled", $(this).scrollTop() > 100);
     if($(this).scrollTop() <= 100)
     {
         $('nav').css('backdrop-filter', `blur(${0.2 * ($(this).scrollTop() / 10)}px)`);
@@ -51,25 +80,6 @@ $(document).scroll(() => {
         $('nav').css('backdrop-filter', 'blur(2px)');
         $('nav').css('background', 'linear-gradient(to bottom, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0))');
     }
-
-    // timeouts.map(to => clearTimeout(to));
-    // timeouts.push(setTimeout(() => {
-    //     // $("nav").toggleClass("scrolled", $(this).scrollTop() > 100);
-    //     // $('nav').css('backdrop-filter', 'blur(2px)');
-    //     // $('nav').css('background')
-    // }, 1000));
-    // if($(this).scrollTop() > 100)
-    // {
-    //     timeouts.map(to => clearTimeout(to));
-    //     timeouts.push(setTimeout(() => {
-    //         $("nav").toggleClass("scrolled", true);
-    //     }, 1000));
-    // }
-    // else
-    // {
-    //     timeouts.map(to => clearTimeout(to));
-    //     timeouts.push(setTimeout(() => {
-    //         $("nav").toggleClass("scrolled", true);
-    //     }, 1000));
-    // }
 })
+
+

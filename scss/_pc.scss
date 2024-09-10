@@ -63,6 +63,48 @@ section {
     color: white;
 }
 
+.hidden-left {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-25%);
+    transition: all 1s;
+}
+
+.hidden-right {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(25%);
+    transition: all 1s;
+}
+
+.hidden-top {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-25%);
+    transition: all 1s;
+}
+
+.hidden-bottom {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(25%);
+    transition: all 1s;
+}
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
 section#about {
     max-height: 60vh;
     height: 100%;
