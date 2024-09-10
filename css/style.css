@@ -275,7 +275,8 @@ header main #hero-img-container .image-stack .image-stack-item--top {
   width: 0%;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -385,7 +386,7 @@ section#our-work {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
 }
 section#our-work h1 {
   font-size: 50px;
@@ -393,11 +394,15 @@ section#our-work h1 {
 }
 section#our-work .bento-grid-container {
   width: 850px;
-  height: 600px;
+  height: 650px;
   padding: 1em;
   display: flex;
   flex-direction: row;
   gap: 0.5em;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 section#our-work .bento-grid-container *:not(img) {
   border-radius: 1.5em;
@@ -535,6 +540,16 @@ section#our-work .bento-grid-container > .col-right > .row1 > .col-right {
 section#our-work .bento-grid-container > .col-right > .row2 {
   flex: 2;
 }
+section#our-work h1.see-more {
+  margin-top: 20px;
+}
+section#our-work h1.see-more a {
+  all: unset;
+}
+section#our-work h1.see-more:hover {
+  color: rgb(124, 124, 124);
+  cursor: pointer;
+}
 
 section#services {
   background: none;
@@ -619,4 +634,163 @@ section#services .services-parent .service:hover .img-parent {
 section#services .services-parent .service:hover .text-parent {
   margin-bottom: 20px;
   transition-duration: 0.3s;
+}
+
+section#testimonials {
+  background: none;
+  height: 800px;
+  padding: 20px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+section#testimonials h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+section#testimonials .testimonial-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: white;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.548);
+  cursor: pointer;
+  color: white;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 50px 80px;
+  width: 800px;
+  min-height: 430px;
+  position: relative;
+  font-size: larger;
+  font-weight: bolder;
+}
+section#testimonials .stars {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 14px;
+}
+section#testimonials .testimonial {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 900;
+  height: 100%;
+  line-height: 28px;
+  margin: 0;
+  padding-top: 0;
+}
+section#testimonials .user {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+section#testimonials .user .user-image {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#testimonials .user .user-details {
+  text-align: center;
+}
+section#testimonials .user .username {
+  margin: 0;
+  font-size: 14px;
+}
+section#testimonials .user .role {
+  margin: 0;
+  font-size: 12px;
+}
+section#testimonials .progress-dots {
+  display: flex;
+  gap: 5px;
+}
+section#testimonials .progress-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+section#testimonials .progress-dot.active {
+  background-color: #555;
+}
+section#testimonials .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+section#testimonials .btn:hover {
+  background-color: #eee;
+}
+section#testimonials #btn-prev {
+  left: 25px;
+}
+section#testimonials #btn-next {
+  right: 25px;
+}
+
+section#contact-us {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  font-family: "MD Grotesk", sans-serif;
+  font-size: xx-large;
+}
+section#contact-us h1 {
+  color: white;
+  font-size: 3em;
+}
+section#contact-us p {
+  margin-top: 0;
+  padding-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: x-large;
+  font-weight: 400;
+  width: 600px;
+}
+section#contact-us button {
+  all: unset;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 100%;
+  padding-top: 20px;
+  margin-top: 20px;
+  border: 3px solid white;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: flex;
+  padding: 10px;
+}
+section#contact-us button p {
+  all: unset;
+}
+section#contact-us button:hover {
+  background-color: white;
+  color: black;
+}
+section#contact-us button:hover p {
+  font-weight: 900;
 }/*# sourceMappingURL=style.css.map */

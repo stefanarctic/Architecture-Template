@@ -1,5 +1,5 @@
-
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
 
@@ -84,7 +84,7 @@ section#about {
 
     // background-color: transparent;
 
-   .about-us-content {
+    .about-us-content {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -141,9 +141,9 @@ section#about {
                 margin-top: 10px;
             }
         }
-   }
+    }
 
-   .about-img {
+    .about-img {
         flex: 1;
         // background-color: green;
         // padding-top: 20px;
@@ -152,7 +152,7 @@ section#about {
         // justify-content: center;
         align-items: center;
         // margin-top: 40px;
-        margin-bottom:  90px;
+        margin-bottom: 90px;
         flex-direction: column;
 
         h1 {
@@ -161,7 +161,7 @@ section#about {
             margin-bottom: 20px;
             font-size: 50px;
             font-weight: 900;
-        }   
+        }
 
         img {
             width: 500px;
@@ -226,7 +226,7 @@ section#our-work {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 
     h1 {
         font-size: 50px;
@@ -235,11 +235,15 @@ section#our-work {
 
     .bento-grid-container {
         width: 850px;
-        height: 600px;
+        height: 650px;
         padding: 1em;
         display: flex;
         flex-direction: row;
         gap: 0.5em;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
         // width: 800px;
         // height: 700px;
 
@@ -271,11 +275,12 @@ section#our-work {
                 display: none;
                 width: 100%;
                 height: 100%;
-                background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+                background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
                 border-radius: 1.5em;
                 // border-radius: 50%;
                 position: absolute;
-                top: 0; left: 0;
+                top: 0;
+                left: 0;
             }
 
             .about-text {
@@ -315,7 +320,7 @@ section#our-work {
                     // top: 50%;
                     // left: 50%;
                     // transform: translate(-50%, -50%);
-    
+
                     // font-size: 2.5rem;
                     // font-size: 40px;
                     // font-size: calc();
@@ -325,7 +330,7 @@ section#our-work {
                     // top: 50%;
                     // right: 50%;
                 }
-    
+
                 p {
                     all: unset;
                     text-shadow: 4px 4px 6px rgb(43, 43, 58);
@@ -339,7 +344,7 @@ section#our-work {
                     // top: 50%;
                     // left: 50%;
                     // transform: translate(-50%, -50%);
-    
+
                     z-index: 7;
                 }
             }
@@ -411,7 +416,7 @@ section#our-work {
                 height: 100%;
                 border-radius: 1.5em;
                 transition: 0.2s;
-    
+
                 // &:hover {
                 //     filter: brightness(50%);
                 // }
@@ -434,52 +439,52 @@ section#our-work {
                     flex-direction: column;
                 }
 
-                & > img {
+                &>img {
                     transform: scale(1.1, 1.1);
                 }
             }
         }
 
-        & > .col-left {
+        &>.col-left {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.5em;
             border: none;
 
-            & > .row1 {
+            &>.row1 {
                 flex: 2;
             }
 
-            & > .row2 {
+            &>.row2 {
                 flex: 1;
             }
         }
 
-        & > .col-right {
+        &>.col-right {
             flex: 2;
             display: flex;
             flex-direction: column;
             gap: 0.5em;
             border: none;
 
-            & > .row1 {
+            &>.row1 {
                 flex: 1;
                 display: flex;
                 flex-direction: row;
                 gap: 0.5em;
                 border: none;
 
-                & > .col-left {
+                &>.col-left {
                     flex: 1;
                 }
 
-                & > .col-right {
+                &>.col-right {
                     flex: 1;
                 }
             }
 
-            & > .row2 {
+            &>.row2 {
                 flex: 2;
             }
         }
@@ -529,6 +534,19 @@ section#our-work {
         //     }
         // }
     }
+
+    h1.see-more {
+        margin-top: 20px;
+
+        a {
+            all: unset;
+        }
+
+        &:hover {
+            color: rgb(124, 124, 124);
+            cursor: pointer;
+        }
+    }
 }
 
 section#services {
@@ -551,7 +569,7 @@ section#services {
     .services-parent {
         margin-top: 10px;
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
             'house-design office-design'
             'interior-detailing paint-selection';
         gap: 30px;
@@ -589,7 +607,7 @@ section#services {
                 height: 200px;
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
                 border-radius: 0.5em;
-                
+
                 img {
                     width: 100%;
                     height: 100%;
@@ -606,7 +624,7 @@ section#services {
                 height: 100%;
                 // text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
                 text-shadow: 4px 4px 6px rgb(43, 43, 58);
-                
+
                 h1 {
                     // text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
                     // background-color: blue;
@@ -656,7 +674,7 @@ section#services {
                     margin-bottom: 20px;
                     transition-duration: 0.3s;
                 }
-                
+
                 cursor: pointer;
             }
 
@@ -700,21 +718,21 @@ section#services {
         //     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
         //     text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
-            
+
         //     .service-content {
         //         position: absolute;
-                
+
         //         h1 {
         //             font-size: 30px;
         //             font-weight: 900;
         //         }
-                
+
         //         p {
         //             font-size: 20px;
         //             font-weight: 400;
         //         }
         //     }
-            
+
         //     &.s1 {
         //         background-image: url('../res/House_Design.png');
         //         background-size: cover;
@@ -736,7 +754,7 @@ section#services {
         //         font-size: 70px;
         //         font-weight: 900;
         //     }
-            
+
         //     &.right {
         //         margin-left: 15%;
         //     }
@@ -752,7 +770,7 @@ section#services {
         //         }
         //     }
         // }
-        
+
         // h1 {
         //     font-size: 70px;
         //     font-weight: 900;
@@ -775,4 +793,300 @@ section#services {
         //     justify-content: space-between;
         // }
     }
+}
+
+// section#testimonials {
+//     width: 100%;
+//     height: 100%;
+//     .slide-container {
+//         width: 70%;
+//         height: 70%;
+//     }
+
+//     .slider {
+//         width: 100%;
+//         height: 100%;
+//         overflow: hidden;
+//     }
+
+//     .slide-row {
+//         width: calc(var(--slides-num) * 100%);
+//         height: 90%;
+//         transition: 0.5s;
+//         display: flex;  // TODO: Remove
+//     }
+
+//     .slide-col {
+//         position: relative;
+//         width: 100%;
+//         height: 100%;
+//     }
+
+//     .hero {
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+
+//         height: 100%;
+//         width: 35%;
+//     }
+
+//     .hero img {
+//         height: 100%;
+//         width: 100%;
+//         border-radius: 10px;
+//         object-fit: cover;
+//         pointer-events: none;  // prevents downloading pics XD
+//         user-select: none;
+//     }
+
+//     .content {
+//         position: absolute;
+//         left: 0;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         width: 75%;
+//         height: 270px;
+
+//         color: var(--bg-color);
+//         background: rgba(255, 255, 255, 0.7);
+
+//         backdrop-filter: blur(4.5px);
+//         border-radius: 10px;
+//         padding: 45px;
+//         z-index: 2;
+//         user-select: none;
+
+//         @include flex-position($dir:column,$x:space-between, $y:flex-start);
+//     }
+
+//     .content p {
+//         line-height: 1.3;
+//         font-size: 1.3em;
+//     }
+
+//     .indicator {
+//         display: flex;
+//         justify-content: center;
+//         margin-top: 4rem;
+//     }
+
+//     .indicator .btn {
+//         display: inline-block;
+//         height: 15px;
+//         width: 15px;
+//         margin: 4px;
+//         border-radius: 15px;
+//         background: var(--primary-color);
+//         cursor: pointer;
+//         transition: all 0.5s ease-in-out;
+//     }
+
+//     .btn.active {
+//         width: 30px;
+//     }
+// }
+
+section#testimonials {
+    background: none;
+    // background-color: black !important;
+    height: 800px;
+    padding: 20px;
+    margin-bottom: 100px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+        font-size: 50px;
+        font-weight: 900;
+    }
+
+    // background-color: rgba(0, 0, 0, 0.301);
+    .testimonial-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: end;
+        justify-content: center;
+        gap: 2rem;
+        background-color: white;
+        color: black;
+        background-color: rgba(0, 0, 0, 0.548);
+        cursor: pointer;
+        // border-radius: 1.5em;
+        // background-color: #fff;
+        // background-color: black;
+        // background-color: transparent;
+        // color: #333;
+        color: white;
+        border-radius: 15px;
+        margin: 20px auto;
+        padding: 50px 80px;
+        width: 800px;
+        min-height: 430px;
+        position: relative;
+        font-size: larger;
+        font-weight: bolder;
+        // padding-top: 0;
+        // padding-bottom: 0;
+    }
+
+    .stars {
+        // background-color: red;
+        padding-top: 0;
+        margin-top: 0;
+        font-size: 14px;
+    }
+
+    .testimonial {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-weight: 900;
+        height: 100%;
+        line-height: 28px;
+        margin: 0;
+        padding-top: 0;
+    }
+
+    .user {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .user .user-image {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+
+    .user .user-details {
+        text-align: center;
+    }
+
+    .user .username {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .user .role {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .progress-dots {
+        display: flex;
+        gap: 5px;
+    }
+
+    .progress-dot {
+        width: 5px;
+        height: 5px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    .progress-dot.active {
+        background-color: #555;
+    }
+
+    .btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #eee;
+        font-size: 10px;
+        cursor: pointer;
+        transition: 0.1s ease;
+    }
+
+    .btn:hover {
+        background-color: #eee;
+    }
+
+    #btn-prev {
+        left: 25px;
+    }
+
+    #btn-next {
+        right: 25px;
+    }
+}
+
+section#contact-us {
+    width: 100%;
+        height: 100%;
+        display: flex;
+        // justify-content: center;
+        // padding-left: 2.5rem;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 100px;
+        
+        // @include ele-bg($url: "../../res/architecture_indoors1.jpg");
+        font-family: 'MD Grotesk', sans-serif;
+        font-size: xx-large;
+
+        h1 {
+            // padding-top: 20px;
+            color: white;
+            font-size: 3em;
+            // padding-bottom: 0;
+            // text-transform: uppercase;
+            // max-width:min-content;
+        }
+
+        p {
+            margin-top: 0;
+            padding-bottom: 20px;
+            // padding-top: 20px;
+            // padding-bottom: 20px;
+            // font-weight: 100;
+            // padding-left: 200px;
+            // background-color: red;
+            font-family: 'Open Sans', sans-serif;
+            font-size: x-large;
+            font-weight: 400;
+            width: 600px;
+        }
+
+        button {
+            all: unset;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 100%;
+            padding-top: 20px;
+            margin-top: 20px;
+            border: 3px solid white;
+            max-width: fit-content;
+            display: flex;
+            padding: 10px;
+
+            p {
+                all: unset;
+            }
+
+            &:hover {
+                background-color: white;
+                color: black;
+
+                p {
+                    font-weight: 900;
+                }
+            }
+        }
 }
