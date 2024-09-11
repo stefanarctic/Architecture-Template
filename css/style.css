@@ -148,44 +148,6 @@ header nav.scrolled {
   color: var(--primary-color) !important;
 }
 
-@media all and (min-width: 799px) {
-  #nav-list {
-    display: flex !important;
-  }
-}
-@media all and (max-width: 799px) {
-  header nav #nav-container {
-    width: 100%;
-    padding: 8vh 0 15px;
-  }
-  header nav #nav-container ul {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("https://w.wallhaven.cc/full/48/wallhaven-48e67o.jpg") no-repeat center fixed;
-    background-size: cover;
-    height: 92vh;
-  }
-  header nav #nav-container ul li {
-    float: none;
-  }
-  header nav #nav-container ul li ul.nav-dropdown {
-    position: static;
-  }
-  header nav #nav-container ul li a {
-    padding: 15px;
-    line-height: 20px;
-  }
-  header nav #nav-container ul li a:hover::before {
-    width: 90%;
-  }
-  header nav #nav-container ul li ul li a {
-    padding-left: 30px;
-  }
-  header nav #nav-container #nav-mobile {
-    display: block;
-  }
-}
 body {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../res/architecture_indoors1.jpg") no-repeat center fixed;
   background-size: cover;
@@ -222,9 +184,10 @@ header main #hero-container p {
   margin-top: 0;
   padding-bottom: 20px;
   font-family: "Open Sans", sans-serif;
-  font-size: x-large;
+  font-size: 24px;
   font-weight: 400;
-  width: 600px;
+  min-width: 600px;
+  max-width: 680px;
 }
 header main #hero-container button {
   all: unset;
@@ -250,6 +213,9 @@ header main #hero-container button:hover p {
   font-weight: 900;
 }
 header main #hero-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 25%;
 }
 header main #hero-img-container img {
@@ -276,6 +242,119 @@ header main #hero-img-container .image-stack .image-stack-item--top {
   width: 0%;
 }
 
+@media all and (max-width: 1600px) {
+  header main #hero-container h1 {
+    font-size: 2.85em;
+  }
+  header main #hero-img-container img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 1500px) {
+  header main #hero-container h1 {
+    font-size: 2.5em;
+  }
+  header main #hero-container p {
+    min-width: 560px;
+  }
+  header main #hero-img-container img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 1350px) {
+  header main #hero-container h1 {
+    font-size: 2.3em;
+  }
+  header main #hero-container p {
+    min-width: 500px;
+    font-size: 22px;
+  }
+  header main #hero-img-container img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 1300px) {
+  header main #hero-container {
+    margin-left: 5%;
+  }
+  header main #hero-container h1 {
+    font-size: 2em;
+  }
+  header main #hero-container p {
+    min-width: 400px;
+  }
+  header main #hero-img-container img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 1100px) {
+  header main #hero-container {
+    margin-left: 2%;
+  }
+  header main #hero-container h1 {
+    font-size: 1.8em;
+  }
+  header main #hero-container p {
+    min-width: 300px;
+  }
+  header main #hero-img-container img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 1050px) {
+  header {
+    margin-bottom: 500px;
+  }
+  header main {
+    display: block;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  header main #hero-container {
+    transform: translate(5%, 0);
+    margin-bottom: 150px;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(5%, 25%);
+    transition: all 1s;
+  }
+  header main #hero-container.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(5%, 0);
+    transition: all 1s;
+  }
+  header main #hero-container h1 {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    max-width: 80%;
+    font-size: 11vw;
+  }
+  header main #hero-container p {
+    min-width: 700px;
+    font-size: 3vw;
+  }
+  header main #hero-img-container {
+    transform: translate(25%, 0);
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(25%, 25%);
+    transition: all 1s;
+  }
+  header main #hero-img-container.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(25%, 0);
+    transition: all 1s;
+  }
+  header main #hero-img-container img {
+    width: 380px;
+  }
+  header main #hero-img-container .image-stack .image-stack-item--bottom {
+    width: 120%;
+  }
+}
 body,
 html {
   margin: 0;

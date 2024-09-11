@@ -83,3 +83,22 @@ $(document).scroll(() => {
 })
 
 
+function getRootElementFontSize() {
+    // Returns a number
+    return parseFloat(
+      // of the computed font-size, so in px
+      getComputedStyle(
+        // for the root <html> element
+        document.documentElement
+      ).fontSize
+    );
+}
+  
+function convertRem(value) {
+    return value * getRootElementFontSize();
+}
+
+setTimeout(() => {
+    // convertRem(2); // 32 (px)
+    console.log(convertRem(3.3));
+},1000);

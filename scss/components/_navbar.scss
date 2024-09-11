@@ -198,51 +198,57 @@ header {
 
 // MQ
 
+@media all and (max-width: 1600px) {
+    header {
+        // Implement navbar
+    }
+}
+
 // overwrite script so that when it's bigger than $mq-max-width
 // the nav shows the bi-screens way
-@media all and (min-width: $mq-max-width) {
-    #nav-list {
-        display: flex !important;
-    }
-}
+// @media all and (min-width: $mq-max-width) {
+//     #nav-list {
+//         display: flex !important;
+//     }
+// }
 
-@media all and (max-width: $mq-max-width) {
-    header nav #nav-container {
-        width: 100%;  // <>
-        padding: 8vh 0 15px;  // fixed-size!
-        ul {
-            display: none;
-            flex-direction: column;
-            justify-content: space-around;
+// @media all and (max-width: $mq-max-width) {
+//     header nav #nav-container {
+//         width: 100%;  // <>
+//         padding: 8vh 0 15px;  // fixed-size!
+//         ul {
+//             display: none;
+//             flex-direction: column;
+//             justify-content: space-around;
 
 
-            @include ele-bg($url: "https://w.wallhaven.cc/full/48/wallhaven-48e67o.jpg");
-            height: 92vh;
-            li {
-                float: none;  // <>
+//             @include ele-bg($url: "https://w.wallhaven.cc/full/48/wallhaven-48e67o.jpg");
+//             height: 92vh;
+//             li {
+//                 float: none;  // <>
 
-                ul.nav-dropdown {
-                    position: static;
-                }
+//                 ul.nav-dropdown {
+//                     position: static;
+//                 }
 
-                a {
-                    // fixed-size!
-                        padding: 15px;
-                        line-height: 20px;
+//                 a {
+//                     // fixed-size!
+//                         padding: 15px;
+//                         line-height: 20px;
 
-                        &:hover::before{
-                            width: 90%;
-                        }
-                }
+//                         &:hover::before{
+//                             width: 90%;
+//                         }
+//                 }
 
-                ul li a {
-                    padding-left: 30px;
-                }
-            }
-        }
+//                 ul li a {
+//                     padding-left: 30px;
+//                 }
+//             }
+//         }
 
-        #nav-mobile {
-            display: block;
-        }
-    }
-}
+//         #nav-mobile {
+//             display: block;
+//         }
+//     }
+// }
