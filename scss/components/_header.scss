@@ -4,7 +4,7 @@
 body {
     background:
         linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-        url('../../res/architecture_indoors1.jpg')
+        url('../res/architecture_indoors1.jpg')
         no-repeat center fixed;
     background-size: cover;
 }
@@ -338,10 +338,6 @@ header {
                     font-size: calc(3vw);
                     // font-size: 18px;
                     // padding-bottom: 20px;
-                }
-
-                button {
-                    // font-size: 120%;
                 }
             }
         
