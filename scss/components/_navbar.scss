@@ -198,10 +198,34 @@ header {
 
 // MQ
 
-@media all and (max-width: 1600px) {
+@media all and (max-width: 1200px) {
     header {
-        // Implement navbar
+        nav {
+            #nav-container {
+                flex: 3.5;
+            }
+        }
     }
+}
+
+@media all and (max-width: 1050px) {
+    // Implement burger
+    // header {
+    //     nav {
+    //         #nav-container {
+    //             flex: 6.5;
+
+    //             ul {
+    //                 li {
+    //                     a {
+    //                         // font-size: 13pt;
+    //                         font-size: calc(1.8vw);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 // overwrite script so that when it's bigger than $mq-max-width
