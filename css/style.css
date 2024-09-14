@@ -151,6 +151,7 @@ header nav.scrolled {
 body {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../res/architecture_indoors1.jpg") no-repeat center fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 header {
@@ -913,4 +914,4 @@ section#contact-us button:hover {
 }
 section#contact-us button:hover p {
   font-weight: 900;
-}/*# sourceMappingURL=style.css.map */
+}
