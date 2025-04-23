@@ -101,4 +101,13 @@ function convertRem(value) {
 setTimeout(() => {
     // convertRem(2); // 32 (px)
     console.log(convertRem(3.3));
-},1000);
+    console.log(convertPxToRem(40));
+    console.log(document.querySelector('.service .text-parent h1'));
+    console.log(document.querySelector('.service .text-parent h1').fontSize);
+    console.log(document.querySelector('.service .text-parent h1').style.fontSize);
+},3000);
+
+// A function to convert px to rem
+function convertPxToRem(px) {
+    return px / parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
