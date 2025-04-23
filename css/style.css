@@ -684,6 +684,7 @@ section#services {
   background: none;
   height: 800px;
   padding: 20px;
+  padding-left: 60px;
   margin-bottom: 100px;
   display: flex;
   align-items: center;
@@ -698,11 +699,9 @@ section#services .services-parent {
   margin-top: 10px;
   display: grid;
   grid-template-areas: "house-design office-design" "interior-detailing paint-selection";
-  gap: 30px;
 }
 section#services .services-parent .service {
-  width: 800px;
-  height: 300px;
+  width: clamp(20rem, 100%, 50rem);
   display: flex;
   align-items: center;
   flex-direction: row;

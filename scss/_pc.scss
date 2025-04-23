@@ -597,6 +597,7 @@ section#services {
     // background-color: black !important;
     height: 800px;
     padding: 20px;
+    padding-left: 60px;
     margin-bottom: 100px;
 
     display: flex;
@@ -615,11 +616,14 @@ section#services {
         grid-template-areas:
             'house-design office-design'
             'interior-detailing paint-selection';
-        gap: 30px;
-
+        // gap: 30px;
+        
         .service {
-            width: 800px;
-            height: 300px;
+            // background-color: red;
+            width: clamp(20rem, 100%, 50rem);
+            // width: 50rem;
+            // width: 800px;
+            // height: 300px;
             // border: 1px solid white;
             display: flex;
             align-items: center;
