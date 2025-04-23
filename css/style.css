@@ -62,69 +62,79 @@ header nav #nav-container ul li a {
 header nav #nav-container ul li a:hover {
   color: rgb(95, 95, 95);
 }
-header nav #nav-container ul li ul.nav-dropdown {
-  position: absolute;
-  z-index: 1;
-  box-shadow: 0 3px 1.2rem 0 var(--shadow-color);
-  display: none;
+header nav #nav-mobile {
+  flex: 1;
+  position: relative;
+  background-color: red;
+  margin-top: 0;
+  padding-top: 0;
+  margin-right: 0;
+  padding-right: 0;
 }
-header nav #nav-container ul li ul.nav-dropdown li {
-  min-width: 190px;
-}
-header nav #nav-container ul li ul.nav-dropdown li a {
-  padding: 15px;
-  line-height: 20px;
-}
-header nav #nav-container #nav-mobile {
-  display: none;
-  position: absolute;
+header nav #nav-mobile #mobile-menu {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
   top: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  font-size: 3em;
+  transform: 0.3 ease;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+}
+header nav #nav-mobile #mobile-menu .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+  background-color: blue;
+}
+header nav #nav-mobile #mobile-menu .nav-list a {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  font-style: "Helvetica", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header nav #nav-mobile #mobile-menu .nav-list a:hover {
+  color: rgb(95, 95, 95);
+}
+header nav #nav-mobile #ham-menu {
   height: 70px;
   width: 70px;
-}
-header nav #nav-container #nav-mobile #burger-menu {
   position: absolute;
-  left: 18px;
-  top: 22px;
   cursor: pointer;
-  padding: 10px 35px 16px 0px;
+  top: 50%;
+  right: 30%;
 }
-header nav #nav-container #nav-mobile #burger-menu span,
-header nav #nav-container #nav-mobile #burger-menu span:before,
-header nav #nav-container #nav-mobile #burger-menu span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
-  width: 35px;
-  background: var(--white-color);
+header nav #nav-mobile #ham-menu span {
+  height: 10px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
   position: absolute;
-  display: block;
-  content: "";
-  transition: all 0.3s ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-header nav #nav-container #nav-mobile #burger-menu span:before {
-  top: -10px;
+header nav #nav-mobile #ham-menu span:nth-child(1) {
+  top: 25%;
 }
-header nav #nav-container #nav-mobile #burger-menu span:after {
-  bottom: -10px;
-}
-header nav #nav-container #nav-mobile #burger-menu.active span {
-  background-color: transparent;
-}
-header nav #nav-container #nav-mobile #burger-menu.active span:before, header nav #nav-container #nav-mobile #burger-menu.active span:after {
-  top: 0;
-}
-header nav #nav-container #nav-mobile #burger-menu.active span:before {
-  transform: rotate(45deg);
-}
-header nav #nav-container #nav-mobile #burger-menu.active span:after {
-  transform: rotate(-45deg);
-}
-header nav::after {
-  content: "";
-  clear: both;
-  display: table;
+header nav #nav-mobile #ham-menu span:nth-child(3) {
+  top: 75%;
 }
 @keyframes show-blur {
   from {
@@ -151,7 +161,6 @@ header nav.scrolled {
 body {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../res/architecture_indoors1.jpg") no-repeat center fixed;
   background-size: cover;
-  overflow-x: hidden;
 }
 
 header {
@@ -274,7 +283,7 @@ header main #hero-img-container .image-stack .image-stack-item--top {
     width: 300px;
   }
 }
-@media all and (max-width: 1300px) {
+@media all and (max-width: 1400px) {
   header main #hero-container {
     margin-left: 5%;
   }
@@ -288,7 +297,7 @@ header main #hero-img-container .image-stack .image-stack-item--top {
     width: 300px;
   }
 }
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1150px) {
   header main #hero-container {
     margin-left: 2%;
   }
@@ -422,11 +431,11 @@ section#about .about-us-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 100px;
 }
 section#about .about-us-content h1 {
   font-size: 70px;
   font-weight: 900;
-  margin-left: 80px;
   padding-top: 20px;
   margin-top: 0;
   margin-bottom: 40px;
@@ -436,7 +445,6 @@ section#about .about-us-content .about-text {
   display: flex;
   align-items: left;
   gap: 20px;
-  margin-left: 80px;
   padding-bottom: 0px;
   margin-bottom: 40px;
   flex-direction: column;

@@ -130,6 +130,7 @@ section#about {
         flex: 1;
         display: flex;
         flex-direction: column;
+        margin-left: 100px;
         // background-color: yellow;
         // justify-content: center;
         // align-items: center;
@@ -137,7 +138,7 @@ section#about {
         h1 {
             font-size: 70px;
             font-weight: 900;
-            margin-left: 80px;
+            // margin-left: 80px;
             padding-top: 20px;
             margin-top: 0;
             margin-bottom: 40px;
@@ -151,7 +152,7 @@ section#about {
             // justify-content: center;
             align-items: left;
             gap: 20px;
-            margin-left: 80px;
+            // margin-left: 80px;
             // height: 10000px;
             // flex: 3;
             // margin-top: 40px;
