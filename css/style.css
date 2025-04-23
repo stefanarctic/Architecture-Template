@@ -702,6 +702,7 @@ section#services .services-parent {
 }
 section#services .services-parent .service {
   width: clamp(20rem, 100%, 50rem);
+  height: 300px;
   display: flex;
   align-items: center;
   flex-direction: row;
